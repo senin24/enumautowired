@@ -7,13 +7,13 @@ import org.springframework.stereotype.Service;
  * Обертка для получения параметров
  */
 @Service
-public class ParamClass {
+public class Wrapper {
 
-    protected static Parameter parameter;
+    protected static ParameterI parameterI;
 
     @Autowired
-    public void setParameter(Parameter parameter){
-        ParamClass.parameter = parameter;
+    public void setParameter(ParameterI parameterI){
+        Wrapper.parameterI = parameterI;
     }
 
     public enum PARAM {
@@ -21,19 +21,19 @@ public class ParamClass {
         SOME_PARAM1() {
             @Override
             public String getValue() {
-                return parameter.getAllParams().get("param1");
+                return parameterI.getAllParams().get("param1");
             }
         },
         SOME_PARAM2() {
             @Override
             public String getValue() {
-                return parameter.getAllParams().get("param2");
+                return parameterI.getAllParams().get("param2");
             }
         },
         SOME_PARAM3() {
             @Override
             public String getValue() {
-                return parameter.getAllParams().get("param3");
+                return parameterI.getAllParams().get("param3");
             }
         };
 

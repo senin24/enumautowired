@@ -8,7 +8,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 @Data
-public class ParameterImpl implements Parameter {
+public class ParameterImpl implements ParameterI {
 
     @Value("${param1}")
     private String param1;
