@@ -3,12 +3,14 @@ package com.github.senin24.enumautowired.model;
 
 import lombok.Data;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
 
 import java.util.HashMap;
 import java.util.Map;
 
+@Component
 @Data
-public class ParameterImpl implements ParameterI {
+public class ParameterImpl implements Parameter {
 
     @Value("${param1}")
     private String param1;

@@ -9,11 +9,11 @@ import org.springframework.stereotype.Service;
 @Service
 public class Wrapper {
 
-    protected static ParameterI parameterI;
+    protected static Parameter parameter;
 
     @Autowired
-    public void setParameter(ParameterI parameterI){
-        Wrapper.parameterI = parameterI;
+    public void setParameter(Parameter parameter){
+        Wrapper.parameter = parameter;
     }
 
     public enum PARAM {
@@ -21,19 +21,19 @@ public class Wrapper {
         SOME_PARAM1() {
             @Override
             public String getValue() {
-                return parameterI.getAllParams().get("param1");
+                return parameter.getAllParams().get("param1");
             }
         },
         SOME_PARAM2() {
             @Override
             public String getValue() {
-                return parameterI.getAllParams().get("param2");
+                return parameter.getAllParams().get("param2");
             }
         },
         SOME_PARAM3() {
             @Override
             public String getValue() {
-                return parameterI.getAllParams().get("param3");
+                return parameter.getAllParams().get("param3");
             }
         };
 
